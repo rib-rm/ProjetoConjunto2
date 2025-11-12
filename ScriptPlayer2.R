@@ -16,3 +16,13 @@ ggplot(dados, aes(y = Estatura)) +
   theme(axis.text.y = element_blank(),
         axis.text = element_text(size = 14))
 
+# Histograma
+
+ggplot(dados, aes(x = Peso)) +
+  geom_histogram(fill = "steelblue", color = "black", bins = 7) +
+  theme_minimal() +
+  labs(title = "Histograma de Peso",
+       x = "Peso",
+       y = "Frequência") +
+  theme(plot.title = element_text(hjust = 0.5))
+
